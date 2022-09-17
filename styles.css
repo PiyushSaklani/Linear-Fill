@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #152238;
+}
+
+h2{
+    position: relative;
+    font-size: 8vw;
+    color: #152238;
+    -webkit-text-stroke: 0.2vw #152238;
+    /* text-transform: uppercase; */
+
+}
+
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: #6495ed;
+    -webkit-text-stroke: 0vw #203354;
+    border-right: 4px solid #6495ed;
+    overflow: hidden;
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0%{
+        width: 0%;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
